@@ -34,10 +34,28 @@ const Customizer = () => {
           readFile = {readFile}
           />
         case 'aipicker':
-          return <AIPicker/>
+          return <AIPicker
+          prompt={prompt}
+          setPrompt={setPrompt}
+          generatingImg={generatingImg}
+          handleSubmit={handleSubmit}
+          />
         default:
           return null;
       }
+  }
+
+  const handleSubmit = async (type) =>{
+    if(!prompt) return alert("Please enter a prompt");
+
+    try{
+
+    } catch(error){
+      alert(error)
+    } finally{
+      setGeneratingImg(false);
+      setActiveEditorTab("");
+    }
   }
 
   const handleDecals = (type, result)=>{
@@ -62,6 +80,12 @@ const Customizer = () => {
         state.isLogoTexture = true;
         state.isFullTexture = false;
     }
+    setActiveFilterTab((preveSate)=>{
+      return{
+          ...preveSate,
+          [tabName]: !preveSate[tabName]
+      }
+    })
   }
 
   const readFile = (type) =>{
@@ -113,8 +137,8 @@ const Customizer = () => {
               key={tab.name}
               tab={tab}
               isFilterTab
-              isActiveTab=""
-              handleClick={()=>{}}
+              isActiveTab={activeEditorTab[tab.name]}
+              handleClick={()=>handleActiveFilterTab(tab.name)}
               />
             ))}
         </motion.div>
