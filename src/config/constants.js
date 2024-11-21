@@ -1,4 +1,4 @@
-import { swatch, fileIcon, clothes, logoShirt, stylishShirt, right, left, up, down, add, minus } from "../assets";
+import { swatch, fileIcon, clothes, logoShirt, stylishShirt, right, left, up, down, add, minus, leftR, rightR, move, reset } from "../assets";
 
 export const EditorTabs = [
   {
@@ -28,29 +28,42 @@ export const FilterTabs = [
 
 export const DecalEditetabs = [
   {
-    name: "right",
-    icon: right,
-  },
-  {
-    name: "left",
-    icon: left,
+    name: "RotateLeft",
+    icon: leftR,
   },
   {
     name: "up",
     icon: up,
   },
   {
-    name: "down",
-    icon: down,
+    name: "RotateRight",
+    icon: rightR,
+  },
+  {
+    name: "left",
+    icon: left,
+  },
+  {
+    name: "reset",
+    icon: reset,
+  },
+  {
+    name: "right",
+    icon: right,
   },
   {
     name: "add",
     icon: add,
   },
   {
+    name: "down",
+    icon: down,
+  },
+  {
     name: "minus",
     icon: minus,
-  }   
+  },
+
 ]
 
 export const DecalTypes = {
@@ -63,3 +76,5 @@ export const DecalTypes = {
     filterTab: "stylishShirt",
   },
 };
+
+export const MoveTab = {name: "move", icon: move};

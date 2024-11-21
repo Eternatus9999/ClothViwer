@@ -12,7 +12,8 @@ const state = proxy({
     positionX: 0, 
     positionY:0.04, 
     positionZ:0.15,
-    scale:0.15
+    scale:0.15,
+    rotation:0
 });
 
 export default state;

@@ -7,7 +7,12 @@ import state from '../store';
 const ClothPicker = () => {
   const snap = useSnapshot(state);
   const changeCloth = (cloth) => {
-    switch(cloth){
+    state.positionX = 0;
+    state.positionY = 0.04;
+    state.positionZ = 0.15;
+    state.scale = 0.15;
+    state.rotation = 0;
+    switch (cloth) {
       case 'polo':
         state.item = './polo.glb';
         break;
@@ -24,6 +29,9 @@ const ClothPicker = () => {
         state.item = './jacket.glb';
         break;
       case 'Cap':
+        state.positionX = 0;
+        state.positionY = 0.06;
+        state.positionZ = 0.15;
         state.item = './cap.glb';
         break;
       default:
@@ -58,7 +66,7 @@ const ClothPicker = () => {
         <div className='mt-4 flex flex-wrap gap-10'>
           <CustomButton
             type="filled"
-            title="T-Shirt Long sleeve"
+            title="Long sleeve"
             handleClick={() => changeCloth('TshirtL')}
             customStyles='txt-xs'
           />
