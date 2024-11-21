@@ -21,14 +21,14 @@ const Home = () => {
           <motion.section className='home'{...slideAnimation('left')}>
             <motion.header {...slideAnimation('down')}>
               <img
-               src='./threejs.png' 
+               src='./file.png' 
                alt='Logo' 
-               className='w-2 h-2 object-contain'></img>
+               className='w-20 h-20 object-contain'></img>
             </motion.header>
             <motion.div className='home-content' {...headContainerAnimation}>
               <motion.div {...headTextAnimation}>
                 <h1 className='head-text'>
-                    Chathusha's<br className='xl:bloc hidden'/> Clothing Shop.
+                    Republic<br className='xl:bloc hidden'/> Clothing Shop.
                 </h1>
               </motion.div>
               <motion.div {...headContentAnimation} className='flex flex-col gap-5'> 
