@@ -46,7 +46,7 @@ const Editor = () => {
     }
     return (
         <div className='flex items-center min-h-screen'>
-            <div className=' grid grid-cols-3 gap-4 w-40'>
+            <div className='editor-container grid grid-cols-3 gap-4 w-40 mr-10 p-2'>
                 {
                     DecalEditetabs.map((tab) => (
                         <div>
