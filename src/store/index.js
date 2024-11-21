@@ -6,8 +6,8 @@ const state = proxy({
     isLogoTexture: false,
     isFullTexture: false,
     item: './shirt_baked.glb',
-    logoDecal: './file.png',
-    fulDecal: './file.png'
+    logoDecal: './Republic.png',
+    fulDecal: './Republic.png'
 });
 
 export default state;
