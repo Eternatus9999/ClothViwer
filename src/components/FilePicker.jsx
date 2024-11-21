@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CustomButton from './CustomButton';
+import state from '../store';
 
 const FilePicker = ({file, setFile, readFile}) => {
   return (
@@ -29,7 +30,7 @@ const FilePicker = ({file, setFile, readFile}) => {
         <CustomButton
         type="filled"
         title="Full"
-        handleClick={()=> readFile('ful')}
+        handleClick={()=> state.fulDecal=file}
         customStyles='txt-xs'
         />
       </div>
