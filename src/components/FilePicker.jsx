@@ -30,7 +30,7 @@ const FilePicker = ({file, setFile, readFile}) => {
         <CustomButton
         type="filled"
         title="Full"
-        handleClick={()=> state.fulDecal=file}
+        handleClick={()=> readFile('full')}
         customStyles='txt-xs'
         />
       </div>
