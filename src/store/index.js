@@ -1,3 +1,4 @@
+
 import {proxy} from 'valtio';
 
 const state = proxy({
@@ -7,7 +8,9 @@ const state = proxy({
     isFullTexture: false,
     item: './shirt_baked.glb',
     logoDecal: './Republic.png',
-    fulDecal: './Republic.png'
+    fulDecal: './Republic.png',
+    position: [0, 0, 0],
+    scale:1
 });
 
 export default state;

@@ -6,7 +6,7 @@ import config from '../config/config';
 import state from '../store';
 import {download, logoShirt, stylishShirt} from '../assets';
 import {downloadCanvasToImage, reader} from '../config/helpers';
-import {EditorTabs, FilterTabs, DecalTypes} from '../config/constants';
+import {EditorTabs, FilterTabs, DecalTypes, DecalEditetabs} from '../config/constants';
 import {fadeAnimation, slideAnimation} from '../config/motion'
 import { ClothPicker,ColorPicker, CustomButton, FilePicker, Tab } from '../components';
 const Customizer = () => {
@@ -15,6 +15,7 @@ const Customizer = () => {
   const [file, setFile] = useState('');
 
   const [activeEditorTab, setActiveEditorTab]= useState("");
+  const [activeDecalEditorTab, setActiveDecalEditorTab]= useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
     logoShirt: true,
     stylishShirt: false,
@@ -37,15 +38,15 @@ const Customizer = () => {
       }
   }
 
-  const handleDecals = (type, result)=>{
-    const decalType = DecalTypes[type];
-
-    state[decalType.stateProperty] = result;
-
-    if(!activeFilterTab[decalType.FilterTab]){
-      handleActiveFilterTab(decalType.FilterTab)
-    }
+const handleDecals = (type, result)=>{
+  const decalType = DecalTypes[type];
+  
+  state[decalType.stateProperty] = result;
+  
+  if(!activeFilterTab[decalType.FilterTab]){
+    handleActiveFilterTab(decalType.FilterTab)
   }
+}
 
   const handleActiveFilterTab = (tabName) =>{
     switch(tabName){
@@ -74,6 +75,25 @@ const Customizer = () => {
       setActiveEditorTab("");
     })
   }
+  const Edit = (direction) => {
+    switch(direction){
+      case'left':
+      state.
+        break;
+      case 'right':
+        break;
+      case 'up':
+        break;
+      case 'down':
+        break;
+      case 'add':
+        break;
+      case 'minus':
+        break;
+      default:
+        break;
+    }
+  }
 
   return (
     <AnimatePresence>
@@ -94,6 +114,23 @@ const Customizer = () => {
             ))}
 
           {generatetabContent()}
+          </div>
+        </div>
+        </motion.div>
+
+        <motion.div
+        key="edite"
+        className='absolute top-0 right-0 z-10'
+        {...slideAnimation('right')}>
+        <div className='flex items-center min-h-screen'>
+          <div className='editortabs-container tabs'>
+            {DecalEditetabs.map(tab =>(
+              <Tab
+              key={tab.name}
+              tab={tab}
+              handleClick={()=>Edit(tab.name)}
+              />
+            ))}
           </div>
         </div>
         </motion.div>
