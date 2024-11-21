@@ -90,10 +90,12 @@ const handleDecals = (type, result)=>{
         state.positionY -= 0.01;
         break;
       case 'add':
-        state.scale += 0.01;
+        state.positionZ = 0.1;
+        state.scale += 0.03;
         break;
       case 'minus':
-        state.scale -= 0.01;
+        state.positionZ = 0.08;
+        state.scale -= 0.03;
         break;
       default:
         break;

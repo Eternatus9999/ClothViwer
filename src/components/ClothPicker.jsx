@@ -23,6 +23,9 @@ const ClothPicker = () => {
       case 'Jacket':
         state.item = './jacket.glb';
         break;
+      case 'Cap':
+        state.item = './cap.glb';
+        break;
       default:
         state.item = 'polo';
     }
@@ -88,8 +91,8 @@ const ClothPicker = () => {
         <div className='mt-4 flex flex-wrap gap-10'>
           <CustomButton
             type="filled"
-            title="Load"
-            handleClick={() => changeCloth()}
+            title="Cap"
+            handleClick={() => changeCloth('Cap')}
             customStyles='txt-xs'
           />
         </div>
