@@ -27,18 +27,18 @@ const Shirt = () => {
             >
                 {snap.isFullTexture && (
                     <Decal
-                        position={state.position}
+                        position={[0,0,0]}
                         rotation={[0, 0, 0]}
-                        scale={state.scale}
+                        scale={1}
                         map={fullTexture}
                     />
                 )}
 
                 {snap.isLogoTexture && (
                     <Decal
-                        position={[0, 0.04, 0.15]}
+                        position={[state.positionX, state.positionY, state.positionZ]}
                         rotation={[0, 0, 0]}
-                        scale={0.15}
+                        scale={state.scale}
                         map={logoTexture}
                         anisotropy={16}
                         depthTest={false}

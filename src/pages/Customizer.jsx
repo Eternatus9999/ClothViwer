@@ -78,17 +78,22 @@ const handleDecals = (type, result)=>{
   const Edit = (direction) => {
     switch(direction){
       case'left':
-      state.
+        state.positionX -= 0.01;
         break;
       case 'right':
+        state.positionX += 0.01;
         break;
       case 'up':
+        state.positionY += 0.01;
         break;
       case 'down':
+        state.positionY -= 0.01;
         break;
       case 'add':
+        state.scale += 0.01;
         break;
       case 'minus':
+        state.scale -= 0.01;
         break;
       default:
         break;

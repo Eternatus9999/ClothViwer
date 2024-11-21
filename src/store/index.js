@@ -9,7 +9,9 @@ const state = proxy({
     item: './shirt_baked.glb',
     logoDecal: './Republic.png',
     fulDecal: './Republic.png',
-    position: [0, 0, 0],
+    positionX: 0, 
+    positionY:0.04, 
+    positionZ:0.15,
     scale:1
 });
 
