@@ -5,6 +5,7 @@ const state = proxy({
     color: '#be2edd',
     isLogoTexture: true,
     isFullTexture: false,
+    item: './shirt_baked.glb',
     logoDecal: './file.png',
     fulDecal: './file.png'
 });
