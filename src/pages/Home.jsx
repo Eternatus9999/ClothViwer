@@ -21,7 +21,7 @@ const Home = () => {
           <motion.section className='home'{...slideAnimation('left')}>
             <motion.header {...slideAnimation('down')}>
               <img
-               src='./Republic.png' 
+               src='./Republic_Home.png' 
                alt='Logo' 
                className='w-25 h-25 object-contain'></img>
             </motion.header>
