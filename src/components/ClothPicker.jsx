@@ -9,7 +9,7 @@ const ClothPicker = () => {
   const changeCloth = (cloth) => {
     switch(cloth){
       case 'polo':
-        state.item = 'polo';
+        state.item = './polo.glb';
         break;
       case 'TshirtS':
         state.item = './shirt_baked.glb';
@@ -18,7 +18,10 @@ const ClothPicker = () => {
         state.item = './shirt.glb';
         break;
       case 'Hoodie':
-        state.item = 'Hoodie';
+        state.item = './hoodie.glb';
+        break;
+      case 'Jacket':
+        state.item = './jacket.glb';
         break;
       default:
         state.item = 'polo';
@@ -76,7 +79,7 @@ const ClothPicker = () => {
           <CustomButton
             type="filled"
             title="Jacket"
-            handleClick={() => changeCloth()}
+            handleClick={() => changeCloth("Jacket")}
             customStyles='txt-xs'
           />
         </div>
