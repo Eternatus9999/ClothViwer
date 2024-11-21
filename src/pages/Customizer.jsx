@@ -8,7 +8,7 @@ import {download, logoShirt, stylishShirt} from '../assets';
 import {downloadCanvasToImage, reader} from '../config/helpers';
 import {EditorTabs, FilterTabs, DecalTypes} from '../config/constants';
 import {fadeAnimation, slideAnimation} from '../config/motion'
-import { AIPicker,ColorPicker, CustomButton, FilePicker, Tab } from '../components';
+import { ClothPicker,ColorPicker, CustomButton, FilePicker, Tab } from '../components';
 const Customizer = () => {
   const snap = useSnapshot(state);
 
@@ -33,29 +33,11 @@ const Customizer = () => {
           setFile={setFile}
           readFile = {readFile}
           />
-        case 'aipicker':
-          return <AIPicker
-          prompt={prompt}
-          setPrompt={setPrompt}
-          generatingImg={generatingImg}
-          handleSubmit={handleSubmit}
-          />
+        case 'clothpicker':
+          return <ClothPicker/>
         default:
           return null;
       }
-  }
-
-  const handleSubmit = async (type) =>{
-    if(!prompt) return alert("Please enter a prompt");
-
-    try{
-
-    } catch(error){
-      alert(error)
-    } finally{
-      setGeneratingImg(false);
-      setActiveEditorTab("");
-    }
   }
 
   const handleDecals = (type, result)=>{
