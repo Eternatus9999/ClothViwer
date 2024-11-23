@@ -36,6 +36,7 @@ const ClothPicker = () => {
         break;
       default:
         state.item = 'polo';
+        break;
     }
   }
   return (

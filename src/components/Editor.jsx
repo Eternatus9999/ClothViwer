@@ -23,11 +23,11 @@ const Editor = () => {
                 break;
             case 'add':
                 state.positionZ = 0.1;
-                state.scale += 0.03;
+                state.scale += 0.01;
                 break;
             case 'minus':
                 state.positionZ = 0.08;
-                state.scale -= 0.03;
+                state.scale -= 0.01;
                 break;
             case 'RotateRight':
                 state.rotation -= 0.1;
