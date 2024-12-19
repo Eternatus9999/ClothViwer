@@ -13,7 +13,7 @@ const Shirt = () => {
     const fullTexture = useTexture(snap.fulDecal);
 
     useFrame((state, delta) => easing.dampC(materials.lambert1.color, snap.color, 0.25, delta));
-    
+
     const stateString = JSON.stringify(snap);
 
     return (
@@ -27,7 +27,7 @@ const Shirt = () => {
             >
                 {snap.isFullTexture && (
                     <Decal
-                        position={[0,0,0]}
+                        position={[0, 0, 0]}
                         rotation={[0, 0, 0]}
                         scale={1}
                         map={fullTexture}

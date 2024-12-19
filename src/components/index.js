@@ -5,11 +5,11 @@ import FilePicker from './FilePicker';
 import Tab from './Tab';
 import Editor from './Editor';
 
-export { 
+export {
     CustomButton,
     ClothPicker,
     ColorPicker,
     FilePicker,
     Editor,
     Tab
- }
+}

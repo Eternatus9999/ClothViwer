@@ -77,4 +77,4 @@ export const DecalTypes = {
   },
 };
 
-export const MoveTab = {name: "move", icon: move};
+export const MoveTab = { name: "move", icon: move };
